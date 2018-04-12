@@ -1,0 +1,63 @@
+﻿<UserControl
+    x:Class="Liuweiqian.Apps.Resume.Introduce.Views.IntroduceView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Liuweiqian.Apps.Resume.Introduce.ViewModels"
+    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <DataTemplate x:Key="IntroduceImage">
+            <Image Source="{Binding Source}"/>
+        </DataTemplate>
+        <DataTemplate x:Key="IntroduceHeader">
+            <StackPanel Orientation="Horizontal">
+                <iconPacks:PackIconMaterial Kind="AccountCardDetails" Height="22" Width="22"/>
+                <TextBlock Text="{DynamicResource BaseInfo}" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Background="{DynamicResource AccentColorBrush4}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <metro:FlipView x:Name="FlipView" IsNavigationEnabled="False" MouseOverGlowEnabled="False" IsBannerEnabled="False"  ItemTemplate="{StaticResource IntroduceImage}" 
+                SelectedIndex="{Binding SelectedIndex}"  ItemsSource="{Binding IntroduceImageItems}">
+        </metro:FlipView>
+        <Expander Grid.Row="1" IsExpanded="True" HeaderTemplate="{StaticResource IntroduceHeader}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Black"  Content="{DynamicResource NameTitle}"/>
+                <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource Name}"/>
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Black"  Content="{DynamicResource GenderTitle}"/>
+                <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource Gender}"/>
+                <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Black"  Content="{DynamicResource BirthDayTitle}"/>
+                <Label Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource BirthDay}"/>
+                <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Black"  Content="{DynamicResource PhoneTitle}"/>
+                <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource Phone}"/>
+                <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Black"  Content="{DynamicResource AddressTitle}"/>
+                <Label Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource Address}"/>
+                <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Black"  Content="{DynamicResource EmailTitle}"/>
+                <Label Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource Email}"/>
+                <Label Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Black"  Content="{DynamicResource JobObjectiveTitle}"/>
+                <Label Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Content="{DynamicResource JobObjective}"/>
+            </Grid>
+        </Expander>
+    </Grid>
+</UserControl>

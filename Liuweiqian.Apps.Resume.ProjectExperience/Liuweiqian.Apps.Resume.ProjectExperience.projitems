@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c17833d6-9d6e-45dd-8f83-bb86f72fd937</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Liuweiqian.Apps.Resume.ProjectExperience</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Views\ProjectExperienceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ProjectExperienceModule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProjectExperienceView.xaml.cs">
+      <DependentUpon>ProjectExperienceView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

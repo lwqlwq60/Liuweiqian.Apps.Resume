@@ -1,0 +1,72 @@
+﻿<UserControl
+    x:Class="Liuweiqian.Apps.Resume.ProjectExperience.Views.ProjectExperienceView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="ProjectExperienceHeader">
+            <StackPanel Orientation="Horizontal">
+                <iconPacks:PackIconOcticons Kind="Project" Height="22" Width="22"/>
+                <TextBlock Text="{DynamicResource ProjectExperienceTitle}" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Expander IsExpanded="True" HeaderTemplate="{StaticResource ProjectExperienceHeader}">
+        <RichTextBox  BorderThickness="0" IsDocumentEnabled="True" IsReadOnly="True" >
+            <FlowDocument>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperienceTime1}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource Project1}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperiencePosition1}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource ProjectExperience1}"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperienceTime2}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource Project2}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperiencePosition2}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource ProjectExperience2}"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperienceTime3}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource Project3}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperiencePosition1}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource ProjectExperience3}"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperienceTime4}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource Project4}"/>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource ProjectExperiencePosition1}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource ProjectExperience4}"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Expander>
+</UserControl>

@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="Liuweiqian.Apps.Resume.Skills.Views.SkillsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <DataTemplate x:Key="EducationHeader">
+            <StackPanel Orientation="Horizontal">
+                <iconPacks:PackIconEntypo Kind="LabFlask" Height="22" Width="22"/>
+                <TextBlock Text="{DynamicResource Skills}" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Expander IsExpanded="True" HeaderTemplate="{StaticResource EducationHeader}">
+        <StackPanel>
+            <Label Content="C#"/>
+            <ProgressBar Value="85"/>
+            <Label Content="Java"/>
+            <ProgressBar Value="60"/>
+            <Label Content="C/C++"/>
+            <ProgressBar Value="30"/>
+            <Label Content="Lua"/>
+            <ProgressBar Value="70"/>
+            <Label Content="JavaScript"/>
+            <ProgressBar Value="50"/>
+            <Label Content="SQL"/>
+            <ProgressBar Value="70"/>
+            <Label Content="MVC"/>
+            <ProgressBar Value="70"/>
+            <Label Content="HTML5"/>
+            <ProgressBar Value="20"/>
+            <Label Content="CSS3"/>
+            <ProgressBar Value="20"/>
+            <Label Content="Dump/Ollydbg/IDA"/>
+            <ProgressBar Value="40"/>
+            <Label Content="GIT/SVN"/>
+            <ProgressBar Value="80"/>
+            <Label Content="Android"/>
+            <ProgressBar Value="20"/>
+        </StackPanel>
+    </Expander>
+</UserControl>

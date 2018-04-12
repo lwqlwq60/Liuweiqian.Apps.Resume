@@ -1,0 +1,84 @@
+﻿<UserControl
+    x:Class="Liuweiqian.Apps.Resume.WorkExperience.Views.WorkExperienceView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="WorkExperienceHeader">
+            <StackPanel Orientation="Horizontal">
+                <iconPacks:PackIconFontAwesome Kind="ShoppingBagSolid" Height="22" Width="22"/>
+                <TextBlock Text="{DynamicResource WorkExperienceTitle}" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Expander IsExpanded="True" HeaderTemplate="{StaticResource WorkExperienceHeader}">
+        <RichTextBox  BorderThickness="0" IsDocumentEnabled="True" IsReadOnly="True" >
+            <FlowDocument>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperienceTime1}"/>
+                    <Span/>
+                    <Span/>
+                    <Hyperlink CommandParameter="{DynamicResource WorkExperienceCompany1Url}"  
+                               Command="{Binding JumpUrlCommand}">
+                        <Run Text="{DynamicResource WorkExperienceCompany1}"/>
+                    </Hyperlink>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperiencePosition1}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource WorkExperience1}"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperienceTime2}"/>
+                    <Span/>
+                    <Span/>
+                    <Hyperlink CommandParameter="{DynamicResource WorkExperienceCompany2Url}"  
+                               Command="{Binding JumpUrlCommand}">
+                        <Run Text="{DynamicResource WorkExperienceCompany2}"/>
+                    </Hyperlink>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperiencePosition2}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource WorkExperience2}"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperienceTime3}"/>
+                    <Span/>
+                    <Span/>
+                    <Hyperlink CommandParameter="{DynamicResource WorkExperienceCompany2Url}"  
+                               Command="{Binding JumpUrlCommand}">
+                        <Run Text="{DynamicResource WorkExperienceCompany2}"/>
+                    </Hyperlink>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperiencePosition3}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource WorkExperience3}"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperienceTime4}"/>
+                    <Span/>
+                    <Span/>
+                    <Hyperlink CommandParameter="{DynamicResource WorkExperienceCompany2Url}"  
+                               Command="{Binding JumpUrlCommand}">
+                        <Run Text="{DynamicResource WorkExperienceCompany2}"/>
+                    </Hyperlink>
+                    <Span/>
+                    <Span/>
+                    <Run FontWeight="Black" Text="{DynamicResource WorkExperiencePosition4}"/>
+                    <LineBreak />
+                    <Ellipse Fill="{DynamicResource AccentColorBrush}" Width="8" Height="8"/>
+                    <Run Text="{DynamicResource WorkExperience4}"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Expander>
+</UserControl>
