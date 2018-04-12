@@ -8,7 +8,7 @@
     <sys:String x:Key="Accent">色调</sys:String>
     <sys:String x:Key="Theme">亮/暗</sys:String>
     <sys:String x:Key="GitHub">源代码</sys:String>
-    <sys:String x:Key="GitHubUrl">https://github.com/lwqlwq60/MyResume</sys:String>
+    <sys:String x:Key="GitHubUrl">https://github.com/lwqlwq60/Liuweiqian.Apps.Resume</sys:String>
     <sys:String x:Key="BaseInfo">基本信息</sys:String>
     <sys:String x:Key="NameTitle">姓名：</sys:String>
     <sys:String x:Key="Name">刘威乾</sys:String>
